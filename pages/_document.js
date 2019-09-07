@@ -20,7 +20,7 @@ export default class extends Document {
       // see https://github.com/nfl/react-helmet#server-usage for more information
       // 'head' was occupied by 'renderPage().head', we cannot use it
       return { 
-        ...documentProps, 
+        ...documentProps,
         helmet: Helmet.renderStatic(),
         styles: [
           <React.Fragment key="styles">
@@ -56,10 +56,10 @@ export default class extends Document {
     return (
       <html {...this.helmetHtmlAttrComponents}>
         <Head>
-        <meta charSet="utf-8" />
-        <meta name="viewport" content="minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no"/>
-        <meta name="theme-color" content={theme.palette.primary.main} />
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"/>
+          <meta charSet="utf-8" />
+          <meta name="viewport" content="minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no"/>
+          <meta name="theme-color" content={theme.palette.primary.main} />
+          <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"/>
           {this.helmetHeadComponents}
         </Head>
         <body {...this.helmetBodyAttrComponents}>

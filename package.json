@@ -3,29 +3,34 @@
   "version": "1.0.0",
   "license": "ISC",
   "scripts": {
-    "dev": "next",
+    "dev": "node index.js",
     "build": "next build",
-    "start": "next start"
+    "start": "NODE_ENV=production node index.js"
   },
   "dependencies": {
     "@material-ui/core": "^4.4.0",
     "@material-ui/icons": "^4.2.1",
     "babel-plugin-styled-components": "^1.10.6",
     "es6-promise": "4.1.1",
+    "express": "^4.17.1",
+    "immer": "^3.2.0",
     "isomorphic-unfetch": "2.0.0",
     "next": "latest",
+    "next-i18next": "^1.1.2",
     "next-redux-saga": "4.0.0",
     "next-redux-wrapper": "2.0.0",
+    "prop-types": "^15.7.2",
     "react": "16.9.0",
     "react-dom": "16.9.0",
     "react-helmet": "^5.2.1",
     "react-redux": "5.0.7",
     "redux": "4.0.1",
     "redux-saga": "1.0.1",
+    "reselect": "^4.0.0",
     "styled-components": "^4.3.2"
   },
   "devDependencies": {
-    "redux-devtools-extension": "2.13.2",
-    "babel-plugin-styled-components": "latest"
+    "babel-plugin-styled-components": "latest",
+    "redux-devtools-extension": "2.13.2"
   }
 }

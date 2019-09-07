@@ -5,6 +5,7 @@ import Page from '../components/page';
 import Helmet from 'react-helmet';
 import { Typography } from '@material-ui/core';
 import styled from 'styled-components';
+import { i18n, Link, withTranslation } from '../i18n';
 
 class Index extends React.Component {
 
@@ -14,7 +15,7 @@ class Index extends React.Component {
     if (!store.getState().placeholderData) {
       store.dispatch(loadData());
     }
-    return { isServer };
+    return { isServer, namespacesRequired: ['common', 'index'] };
   }
 
   componentDidMount () {
@@ -22,10 +23,11 @@ class Index extends React.Component {
   }
 
   render () {
+    const { t } = this.props;
     return (
       <div>
         <Helmet
-          title='WELCOME | Hello next.js!'
+          title={t('title')}
           meta={
             [
               { property: 'og:title', content: 'About' }
@@ -34,6 +36,7 @@ class Index extends React.Component {
         />
         <StyledDiv>
           <Typography variant="body1">
+            {t('title')}
             Hello World! THIS IS A STYLED DIV
           </Typography>
         </StyledDiv>
@@ -63,4 +66,6 @@ const mapDispatchToProps = (dispatch) => {
   };
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(Index);
+const withTranslationIndex = withTranslation('index')(Index);
+
+export default connect(mapStateToProps, mapDispatchToProps)(withTranslationIndex);

@@ -3,6 +3,7 @@ import { connect } from 'react-redux'
 
 import Counter from './counter'
 import Clock from './clock'
+import Layout from './Layout';
 
 function Page (state) {
   const {
@@ -15,7 +16,7 @@ function Page (state) {
   const { lastUpdate, light, placeholderData, error } = home;
 
   return (
-    <div>
+    <Layout>
       <h1>{title}</h1>
       <Clock lastUpdate={lastUpdate} light={light} />
       <Counter />
@@ -30,8 +31,8 @@ function Page (state) {
         </pre>
       )}
       {error && <p style={{ color: 'red' }}>Error: {error.message}</p>}
-    </div>
+    </Layout>
   )
 }
 
-export default connect(state => state)(Page)
+export default connect(state => state)(Page);
