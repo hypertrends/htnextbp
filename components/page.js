@@ -16,7 +16,7 @@ function Page (state) {
   const { lastUpdate, light, placeholderData, error } = home;
 
   return (
-    <Layout>
+    <div>
       <h1>{title}</h1>
       <Clock lastUpdate={lastUpdate} light={light} />
       <Counter />
@@ -31,7 +31,7 @@ function Page (state) {
         </pre>
       )}
       {error && <p style={{ color: 'red' }}>Error: {error.message}</p>}
-    </Layout>
+    </div>
   )
 }
 
