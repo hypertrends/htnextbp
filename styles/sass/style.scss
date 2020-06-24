@@ -1,0 +1,24 @@
+	/* purgecss start ignore */
+  @tailwind base;
+  @tailwind components;
+  /* purgecss end ignore */
+
+
+$bg-color: #212121;
+$container-color: #f4f4f4;
+$primary-color: #000000;
+$accent-color: #F68E20;
+
+$h1: 30px; 
+
+body {
+  color: $primary-color;
+  background-color: $bg-color;
+}
+
+.test{
+  font-size: $h1;
+  color: $accent-color;
+}
+
+@tailwind utilities;

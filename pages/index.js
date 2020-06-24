@@ -34,6 +34,7 @@ class Index extends React.Component {
             ] 
           }
         />
+        <h1 className="test">I'm USING TAILWIND!!!</h1>
         <StyledDiv>
           <Typography variant="body1">
             {t('title')}

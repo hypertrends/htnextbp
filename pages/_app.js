@@ -9,6 +9,7 @@ import { ThemeProvider } from '@material-ui/styles';
 import Layout from '../components/Layout';
 import theme from '../themes/theme';
 import CssBaseline from '@material-ui/core/CssBaseline';
+import '../styles/sass/style.scss';
 
 class MyApp extends App {
 
